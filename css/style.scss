@@ -1,0 +1,140 @@
+@import "reset.css";
+
+$main-color: #e7473c;
+$white-color: #f0f0f0;
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  font-weight: 600;
+}
+
+.info {
+  width: 45%;
+  height: 100vh;
+  padding-left: 75px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    font-size: 70px;
+    margin-top: 105px;
+    width: 50%;
+    color: $main-color;
+    letter-spacing: 5px;
+    line-height: 70px;
+  }
+  .bottom {
+    h3 {
+      width: 50%;
+      color: $main-color;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    p {
+      width: 70%;
+      &:not(footer > p) {
+        color: $main-color;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      padding: 0;
+      li {
+        list-style: none;
+        margin-right: 10px;
+        a {
+          color: #606080;
+          text-decoration: none;
+          display: inline-block;
+          border-bottom: 1px solid #606080;
+          font-size: 14px;
+        }
+      }
+    }
+    footer {
+      color: #606080;
+      font-size: 10px;
+      margin-bottom: 75px;
+    }
+  }
+}
+
+.contents {
+  box-sizing: content-box;
+  width: 55%;
+  padding-left: 45%;
+  height: 500vh;
+  background-color: $main-color;
+}
+
+.content {
+  padding-left: 10%;
+  color: $white-color;
+  background: linear-gradient(#e7372b 0.1%, $main-color);
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5vh;
+    width: 90%;
+    h4 {
+      font-size: 45px;
+    }
+    .director {
+      display: flex;
+      flex-wrap: wrap;
+      width: 20%;
+      font-size: 14px;
+    }
+  }
+  img {
+    width: 90%;
+    height: 35vh;
+    margin: 30px 0 50px 0;
+    background-color: #831d16;
+  }
+  p {
+    width: 90%;
+  }
+  .movie-rating,
+  .footer {
+    width: 90%;
+  }
+  .movie-rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    .rating {
+      color: #831d16;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    color: #831d16;
+    padding-bottom: 3vh;
+    a {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 2px solid #831d16;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column;
+    section {
+      width: 100%;
+    }
+  }
+}
