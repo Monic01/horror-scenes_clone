@@ -56,6 +56,9 @@ body {
           display: inline-block;
           border-bottom: 1px solid #606080;
           font-size: 14px;
+          &:hover {
+            text-shadow: 1px 1px 1px #606080;
+          }
         }
       }
     }
@@ -97,9 +100,13 @@ body {
   }
   img {
     width: 90%;
-    height: 35vh;
+    height: 40vh;
     margin: 30px 0 50px 0;
     background-color: #831d16;
+    filter: brightness(0.7);
+    &:hover {
+      filter: brightness(1);
+    }
   }
   p {
     width: 90%;
@@ -126,15 +133,26 @@ body {
       text-decoration: none;
       color: inherit;
       border-bottom: 2px solid #831d16;
+      &:hover {
+        text-shadow: 1px 1px 1px $white-color;
+      }
     }
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
   body {
     flex-direction: column;
-    section {
+    .info {
+      position: static;
       width: 100%;
+      h1 {
+        margin-bottom: 50px;
+      }
+    }
+    .contents {
+      width: 100%;
+      padding: 0;
     }
   }
 }
